@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "route": {
+      "type": "object",
+      "required": ["id", "stops", "metrics", "path"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the route"
+        },
+        "stops": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["storeId", "order", "items"],
+            "properties": {
+              "storeId": {
+                "type": "string",
+                "description": "Reference to store.id"
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Stop number in route sequence"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["productId", "quantity"],
+                  "properties": {
+                    "productId": {
+                      "type": "string",
+                      "description": "Reference to product.id"
+                    },
+                    "quantity": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                }
+              },
+              "arrivalTime": {
+                "type": "string",
+                "format": "time"
+              },
+              "departureTime": {
+                "type": "string",
+                "format": "time"
+              }
+            }
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "required": ["totalDistance", "totalTime", "totalSavings"],
+          "properties": {
+            "totalDistance": {
+              "type": "number",
+              "description": "Total distance in kilometers"
+            },
+            "totalTime": {
+              "type": "number",
+              "description": "Total time in minutes"
+            },
+            "totalSavings": {
+              "type": "number",
+              "description": "Total savings in DKK"
+            }
+          }
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "coordinates", "instructions"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["start", "waypoint", "end"]
+              },
+              "coordinates": {
+                "type": "object",
+                "required": ["lat", "lng"],
+                "properties": {
+                  "lat": {
+                    "type": "number",
+                    "minimum": 55.5,
+                    "maximum": 55.8
+                  },
+                  "lng": {
+                    "type": "number",
+                    "minimum": 12.4,
+                    "maximum": 12.7
+                  }
+                }
+              },
+              "instructions": {
+                "type": "object",
+                "required": ["text", "distance", "time"],
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Navigation instruction in Danish"
+                  },
+                  "distance": {
+                    "type": "number",
+                    "description": "Distance to next point in meters"
+                  },
+                  "time": {
+                    "type": "number",
+                    "description": "Time to next point in minutes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "district": {
+      "type": "object",
+      "required": ["name", "bounds", "features"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [
+            "Nørrebro",
+            "Østerbro",
+            "Vesterbro",
+            "Frederiksberg",
+            "Amager",
+            "Indre By",
+            "Valby",
+            "Vanløse",
+            "Brønshøj-Husum"
+          ]
+        },
+        "bounds": {
+          "type": "object",
+          "required": ["north", "south", "east", "west"],
+          "properties": {
+            "north": {
+              "type": "number"
+            },
+            "south": {
+              "type": "number"
+            },
+            "east": {
+              "type": "number"
+            },
+            "west": {
+              "type": "number"
+            }
+          }
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "name", "coordinates"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["park", "mainRoad", "secondaryRoad", "landmark", "building"]
+              },
+              "name": {
+                "type": "string"
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["lat", "lng"],
+                  "properties": {
+                    "lat": {
+                      "type": "number",
+                      "minimum": 55.5,
+                      "maximum": 55.8
+                    },
+                    "lng": {
+                      "type": "number",
+                      "minimum": 12.4,
+                      "maximum": 12.7
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

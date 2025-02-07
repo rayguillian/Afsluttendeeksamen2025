@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recipe Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "cuisine",
+    "prepTime",
+    "ingredients",
+    "instructions",
+    "dietaryTags",
+    "allergens",
+    "cost",
+    "servings",
+    "nutrition"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the recipe"
+    },
+    "name": {
+      "type": "string",
+      "description": "Recipe name in Danish"
+    },
+    "cuisine": {
+      "type": "string",
+      "enum": [
+        "Dansk",
+        "Italiensk",
+        "Kinesisk",
+        "Japansk",
+        "Thailandsk",
+        "Vietnamesisk",
+        "Mexicansk",
+        "Indisk",
+        "Middelhavet"
+      ]
+    },
+    "prepTime": {
+      "type": "object",
+      "required": ["category", "minutes"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["hurtig", "normal", "langsom"]
+        },
+        "minutes": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 180
+        }
+      }
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "amount", "unit", "store", "price"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "store": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dietaryTags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "vegetar",
+          "veganer",
+          "pescetær",
+          "glutenfri",
+          "laktosefri",
+          "nøddefri",
+          "økologisk",
+          "lavKulhydrat",
+          "keto",
+          "halal"
+        ]
+      }
+    },
+    "allergens": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "gluten",
+          "mælk",
+          "skaldyr",
+          "æg",
+          "nødder",
+          "soja"
+        ]
+      }
+    },
+    "cost": {
+      "type": "object",
+      "required": ["total", "perServing"],
+      "properties": {
+        "total": {
+          "type": "number"
+        },
+        "perServing": {
+          "type": "number"
+        }
+      }
+    },
+    "servings": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "nutrition": {
+      "type": "object",
+      "required": ["calories", "protein", "carbs", "fat"],
+      "properties": {
+        "calories": {
+          "type": "number"
+        },
+        "protein": {
+          "type": "number"
+        },
+        "carbs": {
+          "type": "number"
+        },
+        "fat": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

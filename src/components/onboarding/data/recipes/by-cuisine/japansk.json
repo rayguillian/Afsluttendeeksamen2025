@@ -1,0 +1,230 @@
+{
+  "cuisine": "Japansk",
+  "recipes": [
+    {
+      "id": "vegan_ramen",
+      "name": "Vegansk Ramen",
+      "description": "Fyldig ramen-suppe med svampe og grøntsager",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 45
+      },
+      "ingredients": [
+        {
+          "id": "svampe_mix",
+          "name": "Blandede Svampe",
+          "amount": 300,
+          "unit": "g",
+          "category": "Grøntsager",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 45,
+              "discount": 31,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Lav svampebouillon",
+        "Tilbered grøntsager",
+        "Kog nudler"
+      ],
+      "dietaryTags": ["veganer", "vegetar"],
+      "allergens": ["soja"],
+      "nutrition": {
+        "calories": 320,
+        "protein": 14,
+        "carbs": 52,
+        "fat": 8
+      },
+      "servings": 4,
+      "difficulty": "mellem",
+      "ratings": {
+        "average": 4.7,
+        "count": 189
+      }
+    },
+    {
+      "id": "keto_sushi",
+      "name": "Keto Sushi Ruller",
+      "description": "Sushi uden ris, rullet i agurk",
+      "prepTime": {
+        "category": "langsom",
+        "minutes": 65
+      },
+      "ingredients": [
+        {
+          "id": "laks_sashimi",
+          "name": "Sashimi Laks",
+          "amount": 400,
+          "unit": "g",
+          "category": "Fisk",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 120,
+              "discount": 82,
+              "discountPercentage": 32
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Skær agurk i tynde skiver",
+        "Forbered fyldet",
+        "Rul forsigtigt"
+      ],
+      "dietaryTags": ["keto", "lavKulhydrat", "glutenfri"],
+      "allergens": ["fisk"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 32,
+        "carbs": 4,
+        "fat": 18
+      },
+      "servings": 2,
+      "difficulty": "svær",
+      "ratings": {
+        "average": 4.8,
+        "count": 145
+      }
+    },
+    {
+      "id": "halal_teriyaki",
+      "name": "Halal Kylling Teriyaki",
+      "description": "Saftig halal kylling i teriyaki sauce",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 25
+      },
+      "ingredients": [
+        {
+          "id": "halal_kylling",
+          "name": "Halal Kyllingebryst",
+          "amount": 500,
+          "unit": "g",
+          "category": "Kød og Fjerkræ",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 75,
+              "discount": 52,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Marinér kyllingen",
+        "Steg på høj varme",
+        "Lav teriyaki sauce"
+      ],
+      "dietaryTags": ["halal", "noeddefri"],
+      "allergens": ["soja"],
+      "nutrition": {
+        "calories": 420,
+        "protein": 38,
+        "carbs": 18,
+        "fat": 22
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.9,
+        "count": 234
+      }
+    },
+    {
+      "id": "oeko_donburi",
+      "name": "Økologisk Grøntsags Donburi",
+      "description": "Skål med økologiske ris og sæsonens grøntsager",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 40
+      },
+      "ingredients": [
+        {
+          "id": "oeko_ris",
+          "name": "Økologiske Sushi Ris",
+          "amount": 400,
+          "unit": "g",
+          "category": "Ris og Gryn",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 42,
+              "discount": 29,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Kog risen",
+        "Tilbered grøntsager",
+        "Anret i skåle"
+      ],
+      "dietaryTags": ["vegetar", "oekologisk", "laktosefri"],
+      "allergens": [],
+      "nutrition": {
+        "calories": 380,
+        "protein": 10,
+        "carbs": 75,
+        "fat": 6
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.6,
+        "count": 167
+      }
+    },
+    {
+      "id": "pescetaer_sashimi",
+      "name": "Luksus Sashimi Tallerken",
+      "description": "Frisk sashimi med forskellige fisk",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 20
+      },
+      "ingredients": [
+        {
+          "id": "blandet_fisk",
+          "name": "Sashimi Mix",
+          "amount": 400,
+          "unit": "g",
+          "category": "Fisk",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 180,
+              "discount": 124,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Skær fisken",
+        "Anret dekorativt",
+        "Servér med tilbehør"
+      ],
+      "dietaryTags": ["pescetær", "glutenfri"],
+      "allergens": ["fisk"],
+      "nutrition": {
+        "calories": 260,
+        "protein": 42,
+        "carbs": 2,
+        "fat": 12
+      },
+      "servings": 2,
+      "difficulty": "svær",
+      "ratings": {
+        "average": 4.9,
+        "count": 198
+      }
+    }
+  ]
+}

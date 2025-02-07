@@ -1,0 +1,230 @@
+{
+  "cuisine": "Dansk",
+  "recipes": [
+    {
+      "id": "frikadeller_classic",
+      "name": "Klassiske Frikadeller",
+      "description": "Saftige danske frikadeller med kartofler og brun sovs",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 45
+      },
+      "ingredients": [
+        {
+          "id": "hakket_svinekoed",
+          "name": "Hakket Svinekød",
+          "amount": 500,
+          "unit": "g",
+          "category": "Kød og Fjerkræ",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 45,
+              "discount": 32,
+              "discountPercentage": 29
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Rør kødet med salt og peber",
+        "Form frikadellerne",
+        "Steg dem på panden"
+      ],
+      "dietaryTags": ["halal"],
+      "allergens": ["gluten", "æg"],
+      "nutrition": {
+        "calories": 450,
+        "protein": 28,
+        "carbs": 35,
+        "fat": 22
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.8,
+        "count": 245
+      }
+    },
+    {
+      "id": "vegetar_frikadeller",
+      "name": "Grøntsagsfrikadeller",
+      "description": "Sprøde vegetariske frikadeller med quinoa og grøntsager",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 25
+      },
+      "ingredients": [
+        {
+          "id": "quinoa",
+          "name": "Quinoa",
+          "amount": 200,
+          "unit": "g",
+          "category": "Gryn",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 32,
+              "discount": 22,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Kog quinoa",
+        "Bland med grøntsager",
+        "Steg på panden"
+      ],
+      "dietaryTags": ["vegetar", "laktosefri"],
+      "allergens": [],
+      "nutrition": {
+        "calories": 320,
+        "protein": 12,
+        "carbs": 45,
+        "fat": 14
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.6,
+        "count": 178
+      }
+    },
+    {
+      "id": "vegan_kartoffelsuppe",
+      "name": "Vegansk Kartoffelsuppe",
+      "description": "Cremet kartoffelsuppe med kokosmelk og urter",
+      "prepTime": {
+        "category": "langsom",
+        "minutes": 75
+      },
+      "ingredients": [
+        {
+          "id": "kartofler",
+          "name": "Økologiske Kartofler",
+          "amount": 800,
+          "unit": "g",
+          "category": "Grøntsager",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 28,
+              "discount": 19,
+              "discountPercentage": 32
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Skræl kartofler",
+        "Kog i kokosmelk",
+        "Blend til cremet konsistens"
+      ],
+      "dietaryTags": ["veganer", "glutenfri", "oekologisk"],
+      "allergens": [],
+      "nutrition": {
+        "calories": 280,
+        "protein": 6,
+        "carbs": 42,
+        "fat": 12
+      },
+      "servings": 6,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.7,
+        "count": 156
+      }
+    },
+    {
+      "id": "keto_fiskefrikadeller",
+      "name": "Keto Fiskefrikadeller",
+      "description": "Proteinrige fiskefrikadeller uden kulhydrater",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 40
+      },
+      "ingredients": [
+        {
+          "id": "laks",
+          "name": "Frisk Laks",
+          "amount": 500,
+          "unit": "g",
+          "category": "Fisk",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 85,
+              "discount": 59,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Hak laksen fint",
+        "Tilsæt æg og krydderier",
+        "Steg i kokosolie"
+      ],
+      "dietaryTags": ["keto", "pescetær", "lavKulhydrat"],
+      "allergens": ["fisk", "æg"],
+      "nutrition": {
+        "calories": 380,
+        "protein": 32,
+        "carbs": 2,
+        "fat": 28
+      },
+      "servings": 4,
+      "difficulty": "mellem",
+      "ratings": {
+        "average": 4.9,
+        "count": 134
+      }
+    },
+    {
+      "id": "noeddefri_boef",
+      "name": "Nøddefri Bøf Stroganoff",
+      "description": "Klassisk bøf stroganoff uden nødder",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 30
+      },
+      "ingredients": [
+        {
+          "id": "oksekoed",
+          "name": "Økologisk Oksekød",
+          "amount": 400,
+          "unit": "g",
+          "category": "Kød",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 75,
+              "discount": 52,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Skær kødet i strimler",
+        "Steg med løg",
+        "Tilsæt flødesauce"
+      ],
+      "dietaryTags": ["noeddefri", "oekologisk"],
+      "allergens": ["mælk"],
+      "nutrition": {
+        "calories": 420,
+        "protein": 35,
+        "carbs": 12,
+        "fat": 28
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.7,
+        "count": 189
+      }
+    }
+  ]
+}

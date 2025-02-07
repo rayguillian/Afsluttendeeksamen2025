@@ -1,0 +1,230 @@
+{
+  "cuisine": "Mexicansk",
+  "recipes": [
+    {
+      "id": "vegan_tacos",
+      "name": "Veganske Tacos",
+      "description": "Sprøde tacos med bønnefyld og guacamole",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 25
+      },
+      "ingredients": [
+        {
+          "id": "sorte_boenner",
+          "name": "Sorte Bønner",
+          "amount": 400,
+          "unit": "g",
+          "category": "Konserves",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 18,
+              "discount": 12,
+              "discountPercentage": 33
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Tilbered bønnefyld",
+        "Lav guacamole",
+        "Varm tortillas"
+      ],
+      "dietaryTags": ["veganer", "vegetar"],
+      "allergens": [],
+      "nutrition": {
+        "calories": 380,
+        "protein": 14,
+        "carbs": 58,
+        "fat": 12
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.7,
+        "count": 189
+      }
+    },
+    {
+      "id": "keto_fajitas",
+      "name": "Keto Kylling Fajitas",
+      "description": "Krydret kylling med grøntsager serveret i salatblade",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 40
+      },
+      "ingredients": [
+        {
+          "id": "kyllingebryst",
+          "name": "Kyllingebryst",
+          "amount": 600,
+          "unit": "g",
+          "category": "Kød og Fjerkræ",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 85,
+              "discount": 59,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Marinér kyllingen",
+        "Steg grøntsager",
+        "Servér i salatblade"
+      ],
+      "dietaryTags": ["keto", "lavKulhydrat", "glutenfri"],
+      "allergens": [],
+      "nutrition": {
+        "calories": 420,
+        "protein": 45,
+        "carbs": 6,
+        "fat": 24
+      },
+      "servings": 4,
+      "difficulty": "mellem",
+      "ratings": {
+        "average": 4.8,
+        "count": 167
+      }
+    },
+    {
+      "id": "pescetaer_ceviche",
+      "name": "Frisk Ceviche",
+      "description": "Marineret fisk med lime og chili",
+      "prepTime": {
+        "category": "langsom",
+        "minutes": 90
+      },
+      "ingredients": [
+        {
+          "id": "hvid_fisk",
+          "name": "Hvid Fisk",
+          "amount": 500,
+          "unit": "g",
+          "category": "Fisk",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 120,
+              "discount": 82,
+              "discountPercentage": 32
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Skær fisken i tern",
+        "Marinér i lime",
+        "Tilsæt grøntsager"
+      ],
+      "dietaryTags": ["pescetær", "glutenfri", "laktosefri"],
+      "allergens": ["fisk"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 38,
+        "carbs": 8,
+        "fat": 12
+      },
+      "servings": 4,
+      "difficulty": "svær",
+      "ratings": {
+        "average": 4.9,
+        "count": 145
+      }
+    },
+    {
+      "id": "halal_enchiladas",
+      "name": "Halal Kylling Enchiladas",
+      "description": "Bagte enchiladas med halal kylling",
+      "prepTime": {
+        "category": "normal",
+        "minutes": 55
+      },
+      "ingredients": [
+        {
+          "id": "halal_kylling",
+          "name": "Halal Kyllingebryst",
+          "amount": 500,
+          "unit": "g",
+          "category": "Kød og Fjerkræ",
+          "prices": [
+            {
+              "store": "Rema 1000",
+              "regular": 75,
+              "discount": 52,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Tilbered kyllingefyld",
+        "Rul enchiladas",
+        "Bag i ovnen"
+      ],
+      "dietaryTags": ["halal"],
+      "allergens": ["gluten", "mælk"],
+      "nutrition": {
+        "calories": 520,
+        "protein": 42,
+        "carbs": 48,
+        "fat": 22
+      },
+      "servings": 4,
+      "difficulty": "mellem",
+      "ratings": {
+        "average": 4.7,
+        "count": 198
+      }
+    },
+    {
+      "id": "oeko_quesadillas",
+      "name": "Økologiske Grøntsags Quesadillas",
+      "description": "Sprøde quesadillas med økologiske grøntsager",
+      "prepTime": {
+        "category": "hurtig",
+        "minutes": 30
+      },
+      "ingredients": [
+        {
+          "id": "oeko_tortillas",
+          "name": "Økologiske Tortillas",
+          "amount": 8,
+          "unit": "stk",
+          "category": "Brød",
+          "prices": [
+            {
+              "store": "Føtex",
+              "regular": 32,
+              "discount": 22,
+              "discountPercentage": 31
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        "Steg grøntsager",
+        "Fyld tortillas",
+        "Varm på panden"
+      ],
+      "dietaryTags": ["vegetar", "oekologisk", "noeddefri"],
+      "allergens": ["gluten", "mælk"],
+      "nutrition": {
+        "calories": 380,
+        "protein": 14,
+        "carbs": 52,
+        "fat": 16
+      },
+      "servings": 4,
+      "difficulty": "nem",
+      "ratings": {
+        "average": 4.6,
+        "count": 178
+      }
+    }
+  ]
+}

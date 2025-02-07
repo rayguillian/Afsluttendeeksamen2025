@@ -1,0 +1,190 @@
+{
+  "city": "Aarhus",
+  "stores": [
+    {
+      "id": "rema1000_trojborg",
+      "chain": "Rema 1000",
+      "name": "Rema 1000 Trøjborg",
+      "location": {
+        "address": "Tordenskjoldsgade 51",
+        "coordinates": {
+          "lat": 56.1697,
+          "lng": 10.2156
+        },
+        "district": "Trøjborg"
+      },
+      "hours": {
+        "weekday": "08:00-22:00",
+        "saturday": "08:00-22:00",
+        "sunday": "08:00-22:00"
+      },
+      "features": ["parkering", "pant", "økologi"],
+      "discountProfile": {
+        "baseDiscount": 29,
+        "maxDiscount": 34,
+        "specialOffers": true,
+        "weekendDeals": true
+      }
+    },
+    {
+      "id": "fotex_bruuns",
+      "chain": "Føtex",
+      "name": "Føtex Bruuns Galleri",
+      "location": {
+        "address": "M. P. Bruuns Gade 25",
+        "coordinates": {
+          "lat": 56.1503,
+          "lng": 10.2033
+        },
+        "district": "Midtbyen"
+      },
+      "hours": {
+        "weekday": "07:00-22:00",
+        "saturday": "07:00-22:00",
+        "sunday": "07:00-22:00"
+      },
+      "features": ["parkering", "pant", "slagter", "bager", "økologi"],
+      "discountProfile": {
+        "baseDiscount": 30,
+        "maxDiscount": 33,
+        "specialOffers": true,
+        "weekendDeals": true
+      }
+    },
+    {
+      "id": "netto_randersvej",
+      "chain": "Netto",
+      "name": "Netto Randersvej",
+      "location": {
+        "address": "Randersvej 88",
+        "coordinates": {
+          "lat": 56.1728,
+          "lng": 10.2027
+        },
+        "district": "Aarhus N"
+      },
+      "hours": {
+        "weekday": "07:00-22:00",
+        "saturday": "07:00-22:00",
+        "sunday": "07:00-22:00"
+      },
+      "features": ["pant", "økologi"],
+      "discountProfile": {
+        "baseDiscount": 31,
+        "maxDiscount": 34,
+        "specialOffers": true,
+        "weekendDeals": false
+      }
+    },
+    {
+      "id": "bilka_tilst",
+      "chain": "Bilka",
+      "name": "Bilka Tilst",
+      "location": {
+        "address": "Agerøvej 7",
+        "coordinates": {
+          "lat": 56.1872,
+          "lng": 10.1289
+        },
+        "district": "Tilst"
+      },
+      "hours": {
+        "weekday": "06:00-24:00",
+        "saturday": "06:00-24:00",
+        "sunday": "06:00-24:00"
+      },
+      "features": ["parkering", "pant", "slagter", "bager", "økologi", "apotek"],
+      "discountProfile": {
+        "baseDiscount": 29,
+        "maxDiscount": 34,
+        "specialOffers": true,
+        "weekendDeals": true
+      }
+    },
+    {
+      "id": "meny_risskov",
+      "chain": "Meny",
+      "name": "Meny Risskov",
+      "location": {
+        "address": "Ndr. Strandvej 19",
+        "coordinates": {
+          "lat": 56.1947,
+          "lng": 10.2181
+        },
+        "district": "Risskov"
+      },
+      "hours": {
+        "weekday": "08:00-20:00",
+        "saturday": "08:00-18:00",
+        "sunday": "08:00-18:00"
+      },
+      "features": ["parkering", "slagter", "bager", "delikatesse", "økologi", "vin"],
+      "discountProfile": {
+        "baseDiscount": 30,
+        "maxDiscount": 32,
+        "specialOffers": true,
+        "weekendDeals": true
+      }
+    }
+  ],
+  "districts": [
+    {
+      "name": "Midtbyen",
+      "bounds": {
+        "north": 56.1589,
+        "south": 56.1463,
+        "east": 10.2147,
+        "west": 10.1932
+      },
+      "features": [
+        {
+          "type": "landmark",
+          "name": "Aarhus Domkirke",
+          "coordinates": {
+            "lat": 56.1568,
+            "lng": 10.2104
+          }
+        },
+        {
+          "type": "mainRoad",
+          "name": "Frederiks Allé",
+          "coordinates": [
+            {"lat": 56.1503, "lng": 10.1932},
+            {"lat": 56.1503, "lng": 10.2147}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trøjborg",
+      "bounds": {
+        "north": 56.1747,
+        "south": 56.1647,
+        "east": 10.2256,
+        "west": 10.2056
+      },
+      "features": [
+        {
+          "type": "park",
+          "name": "Universitetsparken",
+          "coordinates": {
+            "lat": 56.1697,
+            "lng": 10.2056
+          }
+        }
+      ]
+    }
+  ],
+  "routes": {
+    "defaultSpeed": {
+      "walking": 5,
+      "cycling": 15,
+      "driving": 30
+    },
+    "trafficMultipliers": {
+      "morning": 1.3,
+      "evening": 1.4,
+      "weekend": 1.1
+    }
+  }
+}

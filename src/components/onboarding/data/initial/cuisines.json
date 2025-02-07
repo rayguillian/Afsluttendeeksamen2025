@@ -1,0 +1,67 @@
+{
+  "cuisines": [
+    {
+      "id": "dansk",
+      "name": "Dansk",
+      "flag": "🇩🇰",
+      "popularDishes": ["Frikadeller", "Smørrebrød", "Stegt Flæsk"],
+      "description": "Traditionel dansk mad med fokus på kvalitet og enkelhed"
+    },
+    {
+      "id": "italiensk",
+      "name": "Italiensk",
+      "flag": "🇮🇹",
+      "popularDishes": ["Pasta", "Pizza", "Risotto"],
+      "description": "Autentisk italiensk køkken med friske ingredienser"
+    },
+    {
+      "id": "kinesisk",
+      "name": "Kinesisk",
+      "flag": "🇨🇳",
+      "popularDishes": ["Dumplings", "Kylling i Karry", "Forårsruller"],
+      "description": "Traditionelle kinesiske retter med moderne twist"
+    },
+    {
+      "id": "japansk",
+      "name": "Japansk",
+      "flag": "🇯🇵",
+      "popularDishes": ["Sushi", "Ramen", "Tempura"],
+      "description": "Japansk madkunst med fokus på præsentation og balance"
+    },
+    {
+      "id": "thailandsk",
+      "name": "Thailandsk",
+      "flag": "🇹🇭",
+      "popularDishes": ["Pad Thai", "Grøn Karry", "Tom Yum"],
+      "description": "Krydret thailandsk mad med friske urter"
+    },
+    {
+      "id": "vietnamesisk",
+      "name": "Vietnamesisk",
+      "flag": "🇻🇳",
+      "popularDishes": ["Pho", "Forårsruller", "Banh Mi"],
+      "description": "Let og sund vietnamesisk mad"
+    },
+    {
+      "id": "mexicansk",
+      "name": "Mexicansk",
+      "flag": "🇲🇽",
+      "popularDishes": ["Tacos", "Enchiladas", "Guacamole"],
+      "description": "Farverig mexicansk mad med masser af smag"
+    },
+    {
+      "id": "indisk",
+      "name": "Indisk",
+      "flag": "🇮🇳",
+      "popularDishes": ["Butter Chicken", "Dal", "Biryani"],
+      "description": "Krydret indisk mad med rige saucer"
+    },
+    {
+      "id": "middelhavet",
+      "name": "Middelhavet",
+      "flag": "🇬🇷",
+      "popularDishes": ["Græsk Salat", "Moussaka", "Hummus"],
+      "description": "Sund middelhavsmat med olivenolie og friske grøntsager"
+    }
+  ]
+}
