@@ -4,19 +4,36 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -n web,api -c cyan,magenta \"vite\" \"node server.mjs\"",
+    "dev:web": "vite",
+    "dev:api": "node server.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "audit:cuisine-repair": "node cuisine-repair-audit.mjs",
+    "audit:preferences": "node preferences-audit.mjs",
+    "preview": "vite preview",
+    "start": "node server.mjs",
+    "scrape:offers": "python3 -m kobsmart_scraper.cli --source etilbudsavis --lat 56.1567 --lon 10.2106 --radius 10 --grocery-only --expand-chain-stores --output data/etilbudsavis_grocery_offers.xlsx --raw-json-output data/raw/etilbudsavis_grocery_aarhus.json",
+    "build:offers": "python3 -m kobsmart_scraper.build_app_data --raw data/raw/etilbudsavis_grocery_aarhus.json --output public/data/offers.json",
+    "build:catalog": "python3 -m kobsmart_scraper.build_catalog --output public/data/catalog.json",
+    "refresh:offers": "npm run scrape:offers && npm run build:offers",
+    "scrape:offers:salling": "python3 -m kobsmart_scraper.cli --source salling --lat 56.1567 --lon 10.2106 --radius 10 --output data/salling_offers.xlsx --raw-json-output data/raw/salling_aarhus.json",
+    "build:offers:salling": "python3 -m kobsmart_scraper.build_app_data --source salling --raw data/raw/salling_aarhus.json --output public/data/offers.json",
+    "refresh:offers:salling": "npm run scrape:offers:salling && npm run build:offers:salling",
+    "build:regions": "python3 -m kobsmart_scraper.build_regions --radius 8"
   },
   "dependencies": {
+    "firebase": "^10.14.1",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.471.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "uuid": "^11.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
+    "concurrently": "^9.1.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.4"

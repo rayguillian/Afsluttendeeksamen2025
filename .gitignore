@@ -6,9 +6,14 @@ node_modules
 # Production
 dist
 build
+public/data/regions/
 
 # Testing
 coverage
+
+# Python generated files
+__pycache__/
+*.py[cod]
 
 # Environment files
 .env
@@ -21,6 +26,10 @@ coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebase-debug.log*
+
+# Firebase deploy cache
+.firebase/
 
 # Editor directories and files
 .vscode/*

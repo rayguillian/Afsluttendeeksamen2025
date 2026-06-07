@@ -1,0 +1,82 @@
+name: Refresh offer data
+
+# Daily: re-scrape Danish grocery offers, rebuild the app data, and redeploy the
+# live site so kobsmart.web.app always shows current, real prices.
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-offers
+  cancel-in-progress: false
+
+jobs:
+  refresh-offers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install scraper dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Install web dependencies
+        run: npm ci
+
+      # eTilbudsavis is primary (real flyer prices, most chains). If it fails or
+      # returns nothing, fall back to the official Salling Group API.
+      - name: Scrape and rebuild offers (etilbudsavis → Salling fallback)
+        env:
+          SALLING_GROUP_TOKEN: ${{ secrets.SALLING_GROUP_TOKEN }}
+        run: |
+          set -o pipefail
+          if npm run refresh:offers; then
+            echo "offers refreshed via etilbudsavis"
+          else
+            echo "etilbudsavis failed — falling back to Salling Group API"
+            npm run refresh:offers:salling
+          fi
+
+      - name: Rebuild product catalog (best effort)
+        run: npm run build:catalog || echo "catalog refresh skipped (non-fatal)"
+
+      # Per-region files so GPS works nationwide (the app loads only the nearest).
+      - name: Build per-region offer files (best effort)
+        run: npm run build:regions || echo "region build skipped (non-fatal)"
+
+      - name: Sanity-check refreshed data
+        run: |
+          node -e "const d=require('./public/data/offers.json'); const n=(d.offers||[]).length; if(!n) { console.error('No offers produced — aborting deploy'); process.exit(1);} console.log('offers:', n, '| source:', d.meta && d.meta.source);"
+
+      - name: Build web (bundles fresh data into dist/)
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: npx firebase-tools@latest deploy --only hosting --project kobsmart --non-interactive
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "kobsmart-data-bot"
+          git config user.email "kobsmart-data-bot@users.noreply.github.com"
+          # Region files are generated for deployment but intentionally not
+          # committed; daily 77 MB snapshots would rapidly bloat git history.
+          git add data/*.xlsx public/data/offers.json public/data/catalog.json data/raw/*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No offer data changes."
+          else
+            git commit -m "chore: refresh daily offer data"
+            git push
+          fi

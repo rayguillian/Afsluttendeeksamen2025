@@ -1,0 +1,4 @@
+node_modules/
+# Vendored at deploy time by the firebase.json functions predeploy hook:
+server.mjs
+recipe_sources.mjs

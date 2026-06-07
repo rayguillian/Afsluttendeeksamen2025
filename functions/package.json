@@ -1,0 +1,13 @@
+{
+  "name": "kobsmart-api",
+  "description": "KøbSmart API (DeepSeek + routing) — runs server.mjs's apiHandler as a 2nd-gen Cloud Function",
+  "type": "module",
+  "main": "index.mjs",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "firebase-functions": "^6.1.0"
+  },
+  "private": true
+}
